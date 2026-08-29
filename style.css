@@ -1,0 +1,454 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0c0c0c;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    font-optical-sizing: auto;
+}
+
+p {
+    font-optical-sizing: auto;
+}
+
+/* Shared aqua CTA style — used by the header call button, the collapsible
+   locations button, and the "see more information" link */
+.accent-button {
+    color: #080808;
+    background-color: rgb(216, 77, 13);
+    font-weight: 700;
+    border: none;
+    border-radius: .3rem;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.sticky-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0c0c0ccb;
+    border-bottom: .05rem solid #3d3d3d;
+    justify-content: center;
+}
+
+.sticky-header nav {
+    display: flex;
+}
+
+#header-brand {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.header-title-text {
+    padding: 1rem;
+    align-self: center;
+}
+
+.header-title-line {
+    color: #ffffff;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+#header-logo {
+    padding: .5rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.header-links-container {
+    padding: 2rem;
+}
+
+.header-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    font-size: 1.25rem;
+}
+
+.header-links a {
+    color: #9ba1ab;
+}
+
+#header-cta {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 6rem;
+    padding: .6rem;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+#hero {
+    display: grid;
+    justify-content: center;
+    padding: 5rem;
+    padding-top: 10rem;
+    gap: 1rem;
+}
+
+.hero-title {
+    font-size: 7rem;
+    color: white;
+    font-weight: 400;
+}
+
+#hero-details {
+    color: #9ba1ab;
+}
+
+#hero-description {
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+#collapsible-button {
+    padding: .25rem;
+}
+
+.areas-content {
+    max-height: 1px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #9ba1ab;
+    border-radius: 1rem;
+}
+
+.areas-served {
+    padding: 1rem;
+    list-style: none;
+    color: white;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+#about {
+    scroll-margin-top: 96px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4rem;
+    color: white;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-fig {
+    padding: 1rem;
+}
+.about-img {
+    border-radius: 1em;
+}
+
+#about-title {
+    font-size: 1.1rem;
+}
+
+.about-main {
+    width: 39rem;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.about-quote {
+    padding: .2rem;
+    color: #9ba1ab;
+}
+
+.view {
+    width: 100%;
+    max-width: 40rem;
+    border-radius: 1.4rem;
+}
+
+/* ==========================================================================
+   Services & Our Work
+   ========================================================================== */
+#services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem;
+    max-width: 1250px;
+    margin: 0 auto;
+    color: white;
+    background-color: #161616;
+    border-radius: 2rem;
+    height: 35rem;
+}
+
+#services-p{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.services-side h2 {
+    justify-self: center;
+    padding-bottom: 3rem;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.work-side {
+    justify-self: end;
+    margin-right: 10rem;
+    margin-top: -.1rem;
+}
+
+.work-side h2 {
+    margin-bottom: .5rem;
+}
+
+#work-more-link {
+    padding: .2rem;
+    border-radius: .2rem;
+}
+
+.carousel {
+    margin: 1rem 0;
+    width: 20rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.group {
+    display: grid;
+    align-items: center;
+    padding-top: 1em;
+    justify-content: center;
+    gap: 2em;
+    animation: carousel-animation 30s infinite linear;
+}
+
+.card {
+    padding: .1em;
+}
+
+.card-img {
+    border-radius: 1rem;
+    justify-self: center;
+}
+
+@keyframes carousel-animation {
+    from { translate: 0 0; }
+    to { translate: 0 -100%; }
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+#contact {
+    padding: 1rem;
+    margin-top: 10rem;
+    background-color: #5a5a5a;
+    color: white;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#footer {
+    padding: .3rem;
+    background-color: #0f0f0f;
+    color: white;
+    font: .5rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+/* ---- Tablets / iPad-ish (<=1024px) ---- */
+@media (max-width: 1024px) {
+    #about {
+        scroll-margin-top: 95px;
+    }
+    #services {
+        scroll-margin-top: 95px;
+    }
+    #work-gallery {
+        scroll-margin-top: 225px;
+    }
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    #hero {
+        padding: 3rem;
+        padding-top: 8rem;
+    }
+
+    .about-main {
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    #services {
+        height: auto;
+        padding: 3rem;
+    }
+
+    .work-side {
+        margin-right: 3rem;
+    }
+}
+
+/*  Small tablets / large phones (<=768px)  */
+@media (max-width: 768px) {
+    #about {
+        scroll-margin-top: 228px;
+    }
+    #services {
+        scroll-margin-top: 228px;
+    }
+    #work-gallery {
+        scroll-margin-top: 225px;
+    }
+
+    /* Header: switch from absolute-positioned corners to a stack */
+    .sticky-header {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    #header-brand,
+    #header-cta {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+
+    .header-links {
+        gap: 1.25rem;
+        font-size: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-links-container {
+        padding: 1rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    #hero {
+        padding: 2rem;
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    /* About: stack image above text instead of side by side */
+    #about {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .about-fig {
+        justify-self: center;
+    }
+
+    .about-main {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    /* Services & Our Work: stacked, instead of 2 columns */
+    #services {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .work-side {
+        justify-self: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .carousel {
+        width: min(20rem, 85vw);
+        margin: 1rem auto;
+    }
+}
+
+/*  Phones (<=480px)  */
+@media (max-width: 480px) {
+    #about {
+        scroll-margin-top: 225px;
+    }
+    #services {
+        scroll-margin-top: 225px;
+    }
+    #work-gallery {
+        scroll-margin-top: 225px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    #hero {
+        padding: 1.5rem;
+    }
+
+    #hero-description {
+        padding: .5rem;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header-links {
+        gap: 0.75rem;
+        font-size: .9rem;
+    }
+
+    .carousel {
+        width: min(16rem, 90vw);
+        height: 20rem;
+    }
+}
