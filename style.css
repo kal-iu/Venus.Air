@@ -268,7 +268,7 @@ p {
 }
 
 /* footer . just the copyright line */
-#site-footer {
+#copyright-footer {
     padding: .3rem;
     background-color: #0f0f0f;
     color: white;
@@ -342,7 +342,7 @@ p {
 
     /* hero */
     .hero-title {
-        font-size: 3rem;
+        font-size: 3rem;fs
     }
     #hero {
         padding: 2rem;
